@@ -9,6 +9,12 @@ Install [Docker][docker], e.g. on Debian/Ubuntu based systems
 
     sudo apt install docker.io
 
+... on Mac OSX using [Homebrew][homebrew]
+
+    brew cask install docker
+
+Ensure that a user `dockeruser` with ID `10000` exists on your local system.
+
 ## Configuration
 
 Modify `docker/litecoin.conf` according to your environment. 
@@ -41,3 +47,4 @@ Showing the Bitcoin log file:
 
 [litecoin]: https://litecoin.org
 [docker]: https://www.docker.com
+[homebrew]: https://brew.sh/
