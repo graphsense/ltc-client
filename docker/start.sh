@@ -2,6 +2,7 @@
 
 if ! [ -n "$1" ] ; then
     echo "Please provide directory for blockchain data."
+    exit 1
 fi
 
 docker stop litecoin
