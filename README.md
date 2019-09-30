@@ -40,11 +40,11 @@ Attaching to the container:
 
     ./docker/attach.sh
 
-Showing the Bitcoin log file:
+Showing the debug.log file:
 
     ./docker/show_log.sh
 
 
 [litecoin]: https://litecoin.org
 [docker]: https://www.docker.com
-[homebrew]: https://brew.sh/
+[homebrew]: https://brew.sh
