@@ -29,7 +29,7 @@ COPY --from=builder /usr/local/bin/*litecoin* /usr/local/bin/
 
 RUN useradd -r -u 10000 dockeruser && \
     mkdir -p /opt/graphsense/data && \
-    chown dockeruser /opt/graphsense && \
+    chown -R dockeruser /opt/graphsense && \
     # packages
     apt-get update && \
     apt-get install --no-install-recommends -y \
