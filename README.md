@@ -5,13 +5,8 @@ exposing the REST API.
 
 ## Prerequisites
 
-Install [Docker][docker], e.g. on Debian/Ubuntu based systems
-
-    sudo apt install docker.io
-
-... on Mac OSX using [Homebrew][homebrew]
-
-    brew cask install docker
+- [Docker][docker], see e.g. https://docs.docker.com/engine/install/
+- Docker Compose: https://docs.docker.com/compose/install/
 
 Ensure that a user `dockeruser` with ID `10000` exists on your local system.
 
@@ -26,23 +21,37 @@ Make sure your config file includes the following line:
 
     txindex=1
 
+Client data is persisted on the host machine using a Docker volume.
+In the default setting the local directory `./data` is mapped to
+to `/opt/graphsense/data` inside the container. To override these
+settings a Docker Compose override file can be used, e.g.
+
+```
+> cat docker-compose.override.yml
+version: "3.1"
+
+services:
+  litecoin-client:
+    volumes:
+      - /var/data/graphsense/clients/ltc:/opt/graphsense/data
+```
+
+The data directory on the host system must be writeable by user `dockeruser`.
+
 ## Usage
 
-Building the docker container (tagged GitHub version of Litecoin in `docker/Makefile`):
+Building the docker container (a tagged GitHub version of Litecoin is
+specified in `docker/Makefile`):
 
-    ./docker/build.sh
+    docker-compose build
 
-Starting the container:
+Starting the container (in detached mode):
 
-    ./docker/start.sh DATA_DIR
+    docker-compose up -d
 
-Attaching to the container:
+Showing log information:
 
-    ./docker/attach.sh
-
-Showing the debug.log file:
-
-    ./docker/show_log.sh
+    docker-compose logs
 
 
 [litecoin]: https://litecoin.org

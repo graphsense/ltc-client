@@ -1,0 +1,23 @@
+version: "3.5"
+
+services:
+
+  litecoin-client:
+    image: litecoin
+    container_name: litecoin
+    hostname: litecoin
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./data/:/opt/graphsense/data
+    networks:
+      - graphsense-net
+    ports:
+      - 8532:8532
+    command: ["litecoind", "-conf=/opt/graphsense/litecoin.conf", "-datadir=/opt/graphsense/data", "-rest"]
+    restart: always
+
+networks:
+  graphsense-net:
+    name: graphsense-global-net
