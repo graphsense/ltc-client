@@ -3,9 +3,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## Unreleased
+## [0.4.3] - 2020-11-05
 ### Changed
-- Add Docker Compose file
+- Added Docker Compose file
 
 ## [0.4.2] - 2019-12-19
 ### Changed
