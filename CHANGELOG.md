@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [0.4.4] - 2020-06-12
+### Changed
+- Updated Litecoin client to v0.18.1
+
 ## [0.4.3] - 2020-11-05
 ### Changed
 - Added Docker Compose file
