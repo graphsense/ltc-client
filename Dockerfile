@@ -49,3 +49,4 @@ RUN useradd -r -u 10000 dockeruser && \
 ADD docker/litecoin.conf /opt/graphsense/litecoin.conf
 
 USER dockeruser
+CMD ["litecoind", "-conf=/opt/graphsense/litecoin.conf", "-datadir=/opt/graphsense/data", "-rest"]

@@ -15,7 +15,6 @@ services:
       - graphsense-net
     ports:
       - 8532:8532
-    command: ["litecoind", "-conf=/opt/graphsense/litecoin.conf", "-datadir=/opt/graphsense/data", "-rest"]
     restart: always
 
 networks:
