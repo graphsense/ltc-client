@@ -1,6 +1,8 @@
 FROM ubuntu:20.04 as builder
 LABEL maintainer="contact@graphsense.info"
 
+ARG UID=10000
+
 ENV TZ=UTC
 ADD docker/Makefile /tmp/Makefile
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
@@ -30,7 +32,7 @@ FROM ubuntu:20.04
 
 COPY --from=builder /usr/local/bin/litecoin* /usr/local/bin/
 
-RUN useradd -r -u 10000 dockeruser && \
+RUN useradd -r -u $UID dockeruser && \
     mkdir -p /opt/graphsense/data && \
     chown -R dockeruser /opt/graphsense && \
     # packages
