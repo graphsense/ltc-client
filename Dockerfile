@@ -48,7 +48,5 @@ RUN useradd -r -u $UID dockeruser && \
         libminiupnpc17 \
         libssl1.1
 
-ADD docker/litecoin.conf /opt/graphsense/litecoin.conf
-
 USER dockeruser
-CMD ["litecoind", "-conf=/opt/graphsense/litecoin.conf", "-datadir=/opt/graphsense/data", "-rest"]
+CMD ["litecoind", "-conf=/opt/graphsense/client.conf", "-datadir=/opt/graphsense/data", "-rest"]
