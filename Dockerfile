@@ -15,7 +15,9 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
         ca-certificates \
         git \
         libboost-all-dev \
+        libdb++-dev \
         libevent-dev \
+        libfmt-dev \
         libminiupnpc-dev \
         libprotobuf-dev \
         libssl-dev \
