@@ -3,7 +3,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
-## [24.01/1.4.1] - 2024-01-05
+## [24.01.0] - 2024-01-05
+###
+- retired semantic versions, new versions are based on vYEAR.MONTH.VERSION
 
 ## [23.09/1.4.1] - 2023-09-20
 ### Changed
