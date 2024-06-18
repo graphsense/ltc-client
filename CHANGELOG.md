@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [24.06.0] - 2024-06-18
+### Changed
+- update to ltc version v0.21.3
+
 ## [24.01.0] - 2024-01-05
 ### Changed
 - retired semantic versions, new versions are based on vYEAR.MONTH.VERSION
