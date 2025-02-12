@@ -3,6 +3,10 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [24.11.1] - 2025-02-12
+### Changed
+- update docker file to ubuntu 24.04
+
 ## [24.11.0] - 2024-11-11
 ### Changed
 - update to ltc version v0.21.4
